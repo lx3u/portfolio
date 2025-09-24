@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-competences',
-  imports: [],
+  standalone: true,
   templateUrl: './competences.html',
   styleUrl: './competences.css'
 })
-export class Competences {
-
-}
+export class CompetencesComponent {}

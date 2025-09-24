@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-a-propos',
-  imports: [],
+  standalone: true,
   templateUrl: './a-propos.html',
   styleUrl: './a-propos.css'
 })
-export class APropos {
-
-}
+export class AProposComponent {}
