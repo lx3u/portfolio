@@ -1,0 +1,25 @@
+header {
+  width: 100%;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+nav a {
+  color: #FAC9B8;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #F49CBB;
+  border-bottom: 2px solid #F49CBB;
+}
