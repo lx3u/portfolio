@@ -1,98 +1,95 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .container {
-    text-align: left;
-    position: relative;
+  text-align: left;
+  position: relative;
 }
 
 .name {
-    font-size: 1.5rem;
-    color: #FFB6C1;
-    margin-bottom: 10px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #FFB6C1;
-    animation: 
-        typing 2s steps(20, end),
-        blink-caret 0.75s step-end infinite 2s,
-        hide-caret-name 0.01s linear 2s forwards;
+  font-size: 1.5rem;
+  color: #ffb6c1;
+  margin-bottom: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .welcome-text {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.2;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.2;
 }
 
 .welcome-line {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid white;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .welcome-line:first-child {
-    animation: 
-        typing-welcome1 2s steps(20, end) 2.5s both,
-        blink-caret-welcome 0.75s step-end infinite 4.5s,
-        hide-caret-first 0.01s linear 4.5s forwards;
+  animation: show-caret 0.01s linear 0s forwards, typing-welcome 1.5s steps(20, end) 0s both,
+    blink-caret-welcome 0.75s step-end infinite 1.5s, hide-caret-first 0.01s linear 1.5s forwards;
 }
 
 .welcome-line:last-child {
-    animation: 
-        typing-welcome2 3s steps(25, end) 4.5s both,
-        blink-caret-welcome 0.75s step-end infinite 7.5s,
-        hide-caret-final 0.01s linear 7.5s forwards;
+  animation: show-caret 0.01s linear 1.5s forwards, typing-welcome 2s steps(25, end) 1.5s both,
+    blink-caret-welcome 0.75s step-end infinite 3.5s, hide-caret-final 0.01s linear 3.5s forwards;
 }
 
 .portfolio-highlight {
-    color: #FFB6C1;
+  color: #ffb6c1;
 }
 
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+@keyframes show-caret {
+  to {
+    border-right: 4px solid white;
+  }
 }
 
-@keyframes typing-welcome1 {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes typing-welcome2 {
-    from { width: 0; }
-    to { width: 100%; }
+@keyframes typing-welcome {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #FFB6C1; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffb6c1;
+  }
 }
 
 @keyframes blink-caret-welcome {
-    from, to { border-color: transparent; }
-    50% { border-color: white; }
-}
-
-@keyframes hide-caret-name {
-    to { border-color: transparent; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 @keyframes hide-caret-first {
-    to { border-color: transparent; }
+  to {
+    border-color: transparent;
+  }
 }
