@@ -5,6 +5,7 @@ header {
   z-index: 1000;
   background-color: black;
   top: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
