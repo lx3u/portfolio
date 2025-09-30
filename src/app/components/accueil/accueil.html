@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="name">Lou De Baere</div>
-      <div class="welcome-text">
-        <div class="welcome-line">Bienvenue sur</div>
-        <div class="welcome-line">mon <span class="portfolio-highlight">portfolio</span> ;)</div>
-      </div>
-      <div class="boutons-accueil">
-        <button routerLink="/a-propos">En savoir plus sur moi</button>
-        <button routerLink="/competences">Mes compétences</button>
-        <button routerLink="/projets">Voir mes réalisations</button>
-        <button routerLink="/contact">me contacter</button>
-      </div>
+<div class="container">
+  <div class="name">Lou De Baere</div>
+
+  <div class="welcome-text">
+    <div class="welcome-line">Bienvenue sur</div>
+    <div class="welcome-line">
+      mon <span class="portfolio-highlight">portfolio</span> ;)
     </div>
-  </body>
-</html>
+  </div>
+
+  <div class="boutons-accueil">
+    <button (click)="navigateTo('/a-propos')">En savoir plus sur moi</button>
+    <button (click)="navigateTo('/competences')">Mes compétences</button>
+    <button (click)="navigateTo('/projets')">Voir mes réalisations</button>
+    <button (click)="navigateTo('/contact')">Me contacter</button>
+  </div>
+</div>
