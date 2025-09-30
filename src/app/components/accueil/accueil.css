@@ -118,6 +118,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: auto;
+  margin-top: 30px;
 }
 
 .boutons-accueil button {
@@ -125,7 +126,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background: linear-gradient(135deg, #f49cbb, #ffb6c1);
+  background: #f49cbb;
   border: none;
   border-radius: 50px;
   cursor: pointer;
