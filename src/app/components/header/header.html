@@ -1,9 +1,15 @@
-<header>
+<header [class.active]="isMenuOpen()">
+  <div class="hamburger" [class.active]="isMenuOpen()" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <nav>
-    <a routerLink="/accueil">Accueil</a>
-    <a routerLink="/a-propos">À propos</a>
-    <a routerLink="/competences">Compétences</a>
-    <a routerLink="/projets">Projets</a>
-    <a routerLink="/contact">Contact</a>
+    <a routerLink="/accueil" routerLinkActive="active" (click)="closeMenu()">Accueil</a>
+    <a routerLink="/a-propos" routerLinkActive="active" (click)="closeMenu()">À propos</a>
+    <a routerLink="/competences" routerLinkActive="active" (click)="closeMenu()">Compétences</a>
+    <a routerLink="/projets" routerLinkActive="active" (click)="closeMenu()">Projets</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
   </nav>
 </header>

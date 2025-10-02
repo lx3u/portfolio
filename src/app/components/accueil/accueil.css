@@ -3,40 +3,40 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
+  gap: 50px;
+  padding: 40px 20px;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 50px;
 }
 
-
-.name,
-.welcome-text,
-.boutons-accueil {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .name {
-  font-size: 1.5rem;
-  color: #f49cbb;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-size: 1.1rem;
+  color: #ffb6c1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-align: left;
 }
 
 .welcome-text {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 600;
   color: white;
   font-family: 'Poppins', Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  position: relative;
 }
 
 .welcome-line {
@@ -49,10 +49,10 @@
 .welcome-line::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: -2px;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 3px;
   background: white;
 }
 
@@ -79,88 +79,69 @@
              blink-caret 0.75s step-end infinite 3.5s;
 }
 
-/* animation typing */
 @keyframes typing {
-  from { 
-    max-width: 0;
-  }
-  to { 
-    max-width: 100%;
-  }
+  from { max-width: 0; }
+  to { max-width: 100%; }
 }
 
-/* animation fade in */
 @keyframes fade-in {
   to { opacity: 1; }
 }
 
-/* animation curseur clignotant */
 @keyframes blink-caret {
-  50% { background: transparent; }
+  50% { opacity: 0; }
 }
 
-/* retire le curseur */
 @keyframes remove-caret {
   to { background: transparent; }
 }
 
-/* montre le curseur */
 @keyframes show-caret {
   to { background: white; }
 }
 
 .portfolio-highlight {
-  color: #ffb6c1;
+  color: #ffc9d6;
 }
 
 .boutons-accueil {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: auto;
-  margin-top: 30px;
+  width: 100%;
 }
 
 .boutons-accueil button {
-  padding: 15px 35px;
+  padding: 16px 32px;
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background: #f49cbb;
-  border: none;
-  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
   font-family: 'Poppins', Arial, sans-serif;
   letter-spacing: 0.5px;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(244, 156, 187, 0.3);
 }
 
 .boutons-accueil button:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 8px 20px rgba(244, 156, 187, 0.4);
-  background: linear-gradient(135deg, #ffb6c1, #f49cbb);
+  background: #ffb6c1;
+  color: black;
 }
 
-.boutons-accueil button:active {
-  transform: scale(0.98) translateY(1px);
-  box-shadow: 0 4px 10px rgba(244, 156, 187, 0.2);
-}
-
-
-/* responsive */
 @media (max-width: 768px) {
-  .welcome-text { font-size: 2.5rem; }
-  .name { font-size: 1.2rem; }
-  .container { gap: 40px; }
+  .welcome-text { font-size: 2.8rem; }
+  .name { font-size: 1rem; letter-spacing: 2px; }
+  .container { gap: 40px; padding: 30px 20px; }
   .boutons-accueil { grid-template-columns: 1fr; gap: 15px; }
-  .boutons-accueil button { font-size: 0.9rem; padding: 12px 25px; }
+  .boutons-accueil button { font-size: 0.95rem; padding: 14px 28px; }
 }
 
 @media (max-width: 480px) {
-  .welcome-text { font-size: 2rem; }
-  .name { font-size: 1rem; }
-  .container { gap: 30px; }
-  .boutons-accueil button { font-size: 0.85rem; padding: 10px 20px; }
+  .welcome-text { font-size: 2.2rem; }
+  .name { font-size: 0.9rem; letter-spacing: 2px; }
+  .container { gap: 30px; padding: 20px 15px; }
+  .boutons-accueil button { font-size: 0.9rem; padding: 12px 24px; }
 }
