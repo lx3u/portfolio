@@ -106,42 +106,44 @@
 
 .boutons-accueil {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 30px;
   width: 100%;
+
 }
 
+
 .boutons-accueil button {
-  padding: 16px 32px;
+  min-width: auto;  
   font-size: 1rem;
   font-weight: 500;
-  color: white;
-  background: transparent;
-  border: 2px solid #ffb6c1;
-  border-radius: 8px;
+  color: black;
+  background: #ffb6c1;
+  border-radius: 32px;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-family: 'Poppins', Arial, sans-serif;
   letter-spacing: 0.5px;
-  white-space: nowrap;
+  padding: 16px 32px;
+  margin-bottom: 5px;
 }
 
 .boutons-accueil button:hover {
-  background: #ffb6c1;
-  color: black;
+  background: #ed87bc;
+  color: white;
 }
 
 @media (max-width: 768px) {
   .welcome-text { font-size: 2.8rem; }
   .name { font-size: 1rem; letter-spacing: 2px; }
   .container { gap: 40px; padding: 30px 20px; }
-  .boutons-accueil { grid-template-columns: 1fr; gap: 15px; }
+  .boutons-accueil { grid-template-columns: 1fr; gap: 1px; }
   .boutons-accueil button { font-size: 0.95rem; padding: 14px 28px; }
 }
 
 @media (max-width: 480px) {
   .welcome-text { font-size: 2.2rem; }
   .name { font-size: 0.9rem; letter-spacing: 2px; }
-  .container { gap: 30px; padding: 20px 15px; }
+  .container { gap: 30px; padding: 20px 15px;}
   .boutons-accueil button { font-size: 0.9rem; padding: 12px 24px; }
 }
