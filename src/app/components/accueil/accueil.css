@@ -120,6 +120,7 @@
   font-weight: 500;
   color: black;
   background: #ffb6c1;
+  border-color: #ffb6c1;
   border-radius: 32px;
   cursor: pointer;
   font-family: 'Poppins', Arial, sans-serif;
@@ -142,8 +143,8 @@
 }
 
 @media (max-width: 480px) {
-  .welcome-text { font-size: 2.2rem; }
+  .welcome-text { font-size: 2.2rem;}
   .name { font-size: 0.9rem; letter-spacing: 2px; }
-  .container { gap: 30px; padding: 20px 15px;}
-  .boutons-accueil button { font-size: 0.9rem; padding: 12px 24px; }
+  .container { gap: 30px; padding: 30px 30px;}
+  .boutons-accueil button { font-size: 0.9rem; padding: 12px 24px; margin-bottom: 10px;}
 }
