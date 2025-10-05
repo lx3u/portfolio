@@ -1,1 +1,14 @@
-<p>competences works!</p>
+<div class="competences-container">
+  <div class="intro-text">
+    <h1>Mes Compétences</h1>
+    <p>Voici un aperçu des compétences techniques que j'ai pu acquérir au fil de ma formation !</p>
+  </div>
+  <div class="categories-container">
+    <div *ngFor="let category of skillCategories" class="category">
+      <h2>{{ category.title }}</h2>
+      <div class="skills-grid">
+        <app-skill-card *ngFor="let skill of category.skills" [skill]="skill"> </app-skill-card>
+      </div>
+    </div>
+  </div>
+</div>
