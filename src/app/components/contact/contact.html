@@ -1,1 +1,104 @@
-<p>contact works!</p>
+<div class="contact-container">
+    <div class="contact-header">
+        <h1>Contactez-moi</h1>
+        <p class="intro-text">
+            Vous trouverez ci-dessous mes coordonnées et un formulaire de contact
+            si vous souhaitez directement échanger par mail.
+        </p>
+    </div>
+    
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2>Mes coordonnées</h2>
+            <div class="info-items">
+                <div class="info-item">
+                    <div>
+                        <strong>Email</strong>
+                        <p>lou.debaere62@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div>
+                        <strong>Téléphone</strong>
+                        <p>06 36 13 79 03</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <p><a href="https://www.linkedin.com/in/lou-de-baere/" target="_blank">https://www.linkedin.com/in/lou-de-baere/</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-content">
+        <div class="contact-form-section">
+            <h2>Envoyez-moi un message</h2>
+            <div class="contact-form-wrapper">
+                
+                <div *ngIf="showSuccess" class="alert alert-success">
+                    ✓ Message envoyé avec succès ! Je vous répondrai bientôt ;)
+                </div>
+                
+                <div *ngIf="showError" class="alert alert-error">
+                    ✗ Une erreur est survenue. Veuillez réessayer.
+                </div>
+                
+                <form (ngSubmit)="onSubmit()" class="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input 
+                        type="text" 
+                        id="nom" 
+                        [(ngModel)]="formData.nom" 
+                        name="nom"
+                        placeholder="Nom complet"
+                        required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input 
+                        type="email" 
+                        id="email" 
+                        [(ngModel)]="formData.email" 
+                        name="email"
+                        placeholder="Email"
+                        required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="objet">Objet *</label>
+                        <input 
+                        type="text" 
+                        id="objet" 
+                        [(ngModel)]="formData.objet" 
+                        name="objet"
+                        placeholder="Objet"
+                        required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea 
+                        id="message" 
+                        [(ngModel)]="formData.message" 
+                        name="message"
+                        rows="6"
+                        placeholder="Votre message..."
+                        required></textarea>
+                    </div>
+                    
+                    <button 
+                    type="submit" 
+                    class="submit-btn"
+                    [disabled]="isSubmitting">
+                    {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer le message' }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
