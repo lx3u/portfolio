@@ -1,6 +1,4 @@
 .skill-card {
-  background: #2a2a2a;
-  border-radius: 12px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -9,14 +7,19 @@
   gap: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid transparent;
   height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 182, 193, 0.2);
+  text-align: center;
 }
 
 .skill-card:hover {
-  background: #353535;
-  border-color: #ffb6c1;
-  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(237, 135, 188, 0.4);
 }
 
 .skill-card img {
