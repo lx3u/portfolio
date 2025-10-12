@@ -39,11 +39,11 @@
             <div class="contact-form-wrapper">
                 
                 <div *ngIf="showSuccess" class="alert alert-success">
-                    ✓ Message envoyé avec succès ! Je vous répondrai bientôt ;)
+                    Message envoyé avec succès.
                 </div>
                 
                 <div *ngIf="showError" class="alert alert-error">
-                    ✗ Une erreur est survenue. Veuillez réessayer.
+                    Une erreur est survenue. Veuillez réessayer.
                 </div>
                 
                 <form (ngSubmit)="onSubmit()" class="contact-form">

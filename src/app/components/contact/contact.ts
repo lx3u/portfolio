@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact.css'
 })
 
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   formData = {
     nom: '',
     email: '',
@@ -21,6 +22,10 @@ export class ContactComponent {
   isSubmitting = false;
   showSuccess = false;
   showError = false;
+
+  ngOnInit() {
+    emailjs.init('UtN6D7XDRbMqWPAiY');
+  }
 
   async onSubmit() {
     if (!this.formData.nom || !this.formData.email || !this.formData.objet || !this.formData.message) {
@@ -33,39 +38,31 @@ export class ContactComponent {
     this.showError = false;
 
     try {
-      // Configuration EmailJS - À REMPLACER avec tes vraies clés
-      const serviceID = 'TON_SERVICE_ID';
-      const templateID = 'TON_TEMPLATE_ID';
-      const publicKey = 'TA_CLE_PUBLIQUE';
-
       const templateParams = {
         from_name: this.formData.nom,
         from_email: this.formData.email,
         subject: this.formData.objet,
-        message: this.formData.message
+        message: this.formData.message,
+        to_email: 'lou.debaere62@gmail.com'
       };
 
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          service_id: serviceID,
-          template_id: templateID,
-          user_id: publicKey,
-          template_params: templateParams
-        })
-      });
+      const response = await emailjs.send(
+        'service_45ox34o',
+        'template_kzwu7a5',
+        templateParams
+      );
 
-      if (response.ok) {
+      if (response.status === 200) {
         this.showSuccess = true;
         this.resetForm();
+        setTimeout(() => {
+          this.showSuccess = false;
+        }, 5000);
       } else {
         this.showError = true;
       }
     } catch (error) {
-      console.error('Erreur:', error);
+      console.error('Erreur EmailJS:', error);
       this.showError = true;
     } finally {
       this.isSubmitting = false;
