@@ -48,7 +48,7 @@ export class AProposComponent implements OnInit {
   
   downloadCV(): void {
     const link = document.createElement('a');
-    link.href = '/assets/cv_lou_debaere.pdf';
+    link.href = '/assets/cv_lou_debaere';
     link.download = 'cv_lou_debaere.pdf';
     link.click();
   }
