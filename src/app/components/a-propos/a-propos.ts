@@ -26,11 +26,11 @@ export class AProposComponent implements OnInit {
       active: false
     }
   ];
-
+  
   ngOnInit(): void {
     this.animateOnScroll();
   }
-
+  
   animateOnScroll(): void {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -39,10 +39,17 @@ export class AProposComponent implements OnInit {
         }
       });
     }, { threshold: 0.1 });
-
+    
     setTimeout(() => {
       const elements = document.querySelectorAll('.fade-in');
       elements.forEach(el => observer.observe(el));
     }, 100);
+  }
+  
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = '/assets/cv_lou_debaere.pdf';
+    link.download = 'cv_lou_debaere.pdf';
+    link.click();
   }
 }

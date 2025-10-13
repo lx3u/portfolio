@@ -392,3 +392,86 @@
     font-size: 0.9rem;
   }
 }
+.cv-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 182, 193, 0.2);
+  width: 100%;
+}
+
+.cv-text {
+  font-size: 1.2rem;
+  color: #ffb6c1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+}
+
+.download-cv-btn {
+  min-width: auto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: #ffb6c1;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  background: #ed87bc;
+  color: white;
+}
+
+.download-cv-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .cv-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-cv-btn {
+    padding: 11px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-cv-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .download-cv-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
