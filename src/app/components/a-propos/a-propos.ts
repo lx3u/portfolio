@@ -50,9 +50,7 @@ downloadCV(): void {
   const link = document.createElement('a');
   link.href = 'assets/cv_lou_debaere';
   link.download = 'cv_lou_debaere.pdf';
-  document.body.appendChild(link);
   link.click();
-  document.body.removeChild(link);
 }
 
 }
