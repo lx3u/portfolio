@@ -4,18 +4,17 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-a-propos',
   standalone: true,
   templateUrl: './a-propos.html',
-  styleUrl: './a-propos.css'
+  styleUrl: './a-propos.css',
 })
-
 export class AProposComponent implements OnInit {
   timeline = [
     {
       period: 'En cours',
       title: 'IUT de Lens',
       subtitle: 'BUT Informatique',
-      description: 'Parcours A : Conception et réalisation d\'applications',
+      description: "Parcours A : Conception et réalisation d'applications",
       mention: '',
-      active: true
+      active: true,
     },
     {
       period: '2021 - 2024',
@@ -23,34 +22,29 @@ export class AProposComponent implements OnInit {
       subtitle: 'Baccalauréat Général',
       description: 'Spécialités Mathématiques et NSI',
       mention: 'Mention Bien',
-      active: false
-    }
+      active: false,
+    },
   ];
-  
+
   ngOnInit(): void {
     this.animateOnScroll();
   }
-  
+
   animateOnScroll(): void {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     setTimeout(() => {
       const elements = document.querySelectorAll('.fade-in');
-      elements.forEach(el => observer.observe(el));
+      elements.forEach((el) => observer.observe(el));
     }, 100);
   }
-  
-downloadCV(): void {
-  const link = document.createElement('a');
-  link.href = 'assets/cv_lou_debaere';
-  link.download = 'cv_lou_debaere.pdf';
-  link.click();
-}
-
 }

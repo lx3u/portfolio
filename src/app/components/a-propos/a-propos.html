@@ -1,26 +1,30 @@
 <div class="about-container">
   <section class="intro-section fade-in">
     <h1>À propos de moi</h1>
-    <p>
-      Enchantée, moi c'est Lou !
-    </p>
-    <p>
-      Je suis actuellement étudiante en 2ème année de BUT Informatique à l'IUT de Lens.
-    </p>
+    <p>Enchantée, moi c'est Lou !</p>
+    <p>Je suis actuellement étudiante en 2ème année de BUT Informatique à l'IUT de Lens.</p>
   </section>
-  
+
   <div class="content-wrapper">
     <section class="section-block fade-in cv-section">
       <div class="cv-container">
-        <p class="cv-text">Cliquez ici pour télécharger mon CV</p>
-        <button class="download-cv-btn" (click)="downloadCV()">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <p class="cv-text">Cliquez ici pour consulter mon CV</p>
+        <a href="assets/cv-lou-debaere.pdf" target="_blank" class="download-cv-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <span>Télécharger mon CV</span>
-        </button>
+          <span>Consulter mon CV</span>
+        </a>
       </div>
     </section>
     <!--timeline -->
@@ -29,8 +33,7 @@
       <div class="timeline">
         <div class="timeline-line"></div>
         @for (item of timeline; track item.title) {
-          <div class="timeline-item" 
-          [class.active]="item.active">
+        <div class="timeline-item" [class.active]="item.active">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="period">{{ item.period }}</span>
@@ -38,71 +41,76 @@
             <h4>{{ item.subtitle }}</h4>
             <p>{{ item.description }}</p>
             @if (item.mention) {
-              <span class="mention">{{ item.mention }}</span>
+            <span class="mention">{{ item.mention }}</span>
             }
           </div>
         </div>
-      }
-    </div>
-  </section>
-  
-  <section class="section-block fade-in">
-    <h2 class="section-title">Ma passion pour l'informatique</h2>
-    <div class="text-content">
-      <p>
-        Depuis mon enfance, j'ai toujours été attirée par l'informatique (l'ordinateur, 
-        les jeux vidéo et l'envie de toujours savoir <strong>"Comment ça marche ça ?"</strong>)
-      </p>
-      <p>
-        Cette curiosité m'a naturellement amenée à choisir la spécialité 
-        <strong>Numérique et Sciences de l'Informatique</strong> au lycée,
-        qui m'a tout de suite beaucoup plu. 
-        J'ai pu écrire mes premières lignes de code, notamment en Python et HTML/CSS.
-      </p>
-      <p>
-        Ma première année de BUT a confirmé mon intérêt pour l'informatique, et plus précisément pour le développement. 
-        J'ai pu acquérir des bases solides et appris à travailler en équipe sur mes premiers 
-        "vrais" projets.
-      </p>
-    </div>
-  </section>
-  
-  <section class="section-block fade-in">
-    <h2 class="section-title">Mes objectifs</h2>
-    <div class="goals-card">
-      <p>
-        Aujourd'hui, mon objectif est de décrocher une <strong>alternance</strong> 
-        pour mettre en pratique mes compétences en continuant à en acquérir de nouvelles.
-      </p>
-      <p>
-        Je suis convaincue que cette expérience serait une réelle opportunité d'apprendre 
-        et de donner du sens à mon travail en participant à des projets concrets et utiles.
-      </p>
-    </div>
-  </section>
-  
-  <section class="section-block fade-in">
-    <h2 class="section-title">Et au-delà du code ?</h2>
-    <div class="hobbies-grid">
-      <div class="hobby-card">
-        <img src="assets/livre.png" alt="Lecture" class="hobby-icon">
-        <h3>Lecture</h3>
-        <p>J'aime lire des romans contemporains et introspectifs. 
-          Je porte également un grand intérêt pour les livres engagés qui traitent différents enjeux sociétaux.</p>
+        }
+      </div>
+    </section>
+
+    <section class="section-block fade-in">
+      <h2 class="section-title">Ma passion pour l'informatique</h2>
+      <div class="text-content">
+        <p>
+          Depuis mon enfance, j'ai toujours été attirée par l'informatique (l'ordinateur, les jeux
+          vidéo et l'envie de toujours savoir <strong>"Comment ça marche ça ?"</strong>)
+        </p>
+        <p>
+          Cette curiosité m'a naturellement amenée à choisir la spécialité
+          <strong>Numérique et Sciences de l'Informatique</strong> au lycée, qui m'a tout de suite
+          beaucoup plu. J'ai pu écrire mes premières lignes de code, notamment en Python et
+          HTML/CSS.
+        </p>
+        <p>
+          Ma première année de BUT a confirmé mon intérêt pour l'informatique, et plus précisément
+          pour le développement. J'ai pu acquérir des bases solides et appris à travailler en équipe
+          sur mes premiers "vrais" projets.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block fade-in">
+      <h2 class="section-title">Mes objectifs</h2>
+      <div class="goals-card">
+        <p>
+          Aujourd'hui, mon objectif est de décrocher une <strong>alternance</strong>
+          pour mettre en pratique mes compétences en continuant à en acquérir de nouvelles.
+        </p>
+        <p>
+          Je suis convaincue que cette expérience serait une réelle opportunité d'apprendre et de
+          donner du sens à mon travail en participant à des projets concrets et utiles.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block fade-in">
+      <h2 class="section-title">Et au-delà du code ?</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-card">
+          <img src="assets/livre.png" alt="Lecture" class="hobby-icon" />
+          <h3>Lecture</h3>
+          <p>
+            J'aime lire des romans contemporains et introspectifs. Je porte également un grand
+            intérêt pour les livres engagés qui traitent différents enjeux sociétaux.
+          </p>
         </div>
         <div class="hobby-card">
-          <img src="assets/manette.png" alt="Jeux vidéo" class="hobby-icon">
+          <img src="assets/manette.png" alt="Jeux vidéo" class="hobby-icon" />
           <h3>Jeux vidéo</h3>
-          <p>Je joue beaucoup à des jeux qui mêlent compétition, stratégie et coopération (comme League of Legends)
+          <p>
+            Je joue beaucoup à des jeux qui mêlent compétition, stratégie et coopération (comme
+            League of Legends)
           </p>
           <p>
-            J'aime aussi les univers narratifs (Life is Strange et j'ai découvert récemment Cyberpunk 2077).
+            J'aime aussi les univers narratifs (Life is Strange et j'ai découvert récemment
+            Cyberpunk 2077).
           </p>
         </div>
       </div>
       <p class="hobbies-description">
-        Ces passions stimulent ma curiosité, ma créativité et ma logique, 
-        des qualités qui sont essentielles dans le développement informatique.
+        Ces passions stimulent ma curiosité, ma créativité et ma logique, des qualités qui sont
+        essentielles dans le développement informatique.
       </p>
     </section>
   </div>
