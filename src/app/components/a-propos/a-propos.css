@@ -260,12 +260,36 @@
   font-family: 'Poppins', Arial, sans-serif;
 }
 
-.hobby-card p {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 2rem;
 }
+
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hobby-card h3 {
+  color: #ffb6c1;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hobby-card p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: justify;
+  hyphens: auto;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 .hobbies-description {
   text-align: center;
@@ -371,10 +395,6 @@
     gap: 12px;
   }
 
-  .hobby-card {
-    padding: 1.2rem;
-  }
-
   .hobby-card .hobby-icon {
     width: 50px;
     height: 50px;
@@ -384,8 +404,30 @@
     font-size: 1rem;
   }
 
+  .hobby-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid rgba(255, 182, 193, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: all 0.3s ease;
+}
+
+  .hobby-card h3 {
+    color: #ffb6c1;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
   .hobby-card p {
-    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: justify;
+      hyphens: auto;
+  width: 100%;
   }
 
   .hobbies-description {
@@ -404,10 +446,10 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 2.5rem;
   border: 1px solid rgba(255, 182, 193, 0.2);
   width: 100%;
 }
@@ -423,7 +465,8 @@
 }
 
 .download-cv-btn {
-  min-width: auto;
+  width: 280px;
+  max-width: 100%;
   font-size: 1rem;
   font-weight: 500;
   color: white;
@@ -433,12 +476,13 @@
   cursor: pointer;
   font-family: 'Montserrat', Arial, sans-serif;
   letter-spacing: 0.5px;
-  padding: 16px 32px;
-  margin-bottom: 5px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .download-cv-btn:hover {
