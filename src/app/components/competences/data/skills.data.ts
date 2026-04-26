@@ -7,6 +7,7 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: 'HTML', logo: '/assets/logos/html.svg' },
       { name: 'CSS', logo: '/assets/logos/css.svg' },
       { name: 'PHP', logo: '/assets/logos/php.svg' },
+      { name: 'TypeScript', logo: '/assets/logos/typescript.svg' },
     ],
   },
   {
@@ -14,6 +15,7 @@ export const SKILLS_DATA: SkillCategory[] = [
     skills: [
       { name: 'Angular', logo: '/assets/logos/angular.svg' },
       { name: 'Laravel', logo: '/assets/logos/laravel.svg' },
+      { name: 'Symfony', logo: '/assets/logos/symfony.svg' },
     ],
   },
   {
@@ -37,6 +39,13 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: 'Git', logo: '/assets/logos/git.svg' },
       { name: 'GitLab', logo: '/assets/logos/gitlab.svg' },
       { name: 'GitHub', logo: '/assets/logos/github.svg' },
+    ],
+  },
+  {
+    title: 'Conteneurisation',
+    skills: [
+      { name: 'Docker', logo: '/assets/logos/docker.svg' },
+      { name: 'Podman', logo: '/assets/logos/podman.svg' },
     ],
   },
   {
